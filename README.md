@@ -18,7 +18,6 @@
 - 🌎 Production: https://website.com
 - 🌐 Development: https://x0n4d0.github.io/caleventos
 - 🔗 API: https://api.website.com
-- 📲 Mobile: https://play.google.com/store/apps/details?id=caleventos
 
 <br>
 
