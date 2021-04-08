@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
 
           <link rel="icon" href="favicon.png" type="image/png" />
 
-          <title>FullStack Boilerplate</title>
+          <title>Caleventos</title>
         </Head>
         <body>
           <Main />
