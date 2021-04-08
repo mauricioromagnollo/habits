@@ -49,7 +49,7 @@
 
 ## 📄 **Sobre o Projeto**
 
-Type here about your project and what problem it solves...
+O projeto consiste em criar um calendário de eventos, onde será possível gerenciar os seus eventos favoritos, fazendo com que você não perca mais nenhuma data importante. Essa ideia surgiu a partir de um desafio técnico para uma vaga de desenvolvimento web.
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
@@ -97,7 +97,7 @@ Type here about your project and what problem it solves...
 
 ## 📝 **Requisitos**
 
-Read the complete requirements documentation for this project **[here](./docs/requirements)**.
+Leia os [arquivos de requisitos](./docs/requirements) do projeto.
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
@@ -109,7 +109,7 @@ Read the complete requirements documentation for this project **[here](./docs/re
 
 ## 📦 **Releases**
 
-See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases.
+Veja o arquivo **[CHANGELOG](./docs/guides/CHANGELOG.md)** para acompanhar as atualizações.
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
@@ -187,7 +187,7 @@ See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases
 
 ## 🍷 **Utilizando o Projeto**
 
-After installing all the [dependencies](#%EF%B8%8F-dependencies) on your computer, follow these steps:
+Após instalar todas as [dependências](#%EF%B8%8F-dependências) no seu computador, siga esses passos:
 
 ```sh
 # Clone este repositório:
