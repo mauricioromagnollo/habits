@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -8,8 +8,13 @@ export default createGlobalStyle`
   }
 
   :root {
+    --blue: #04A3FB;
+    --orange: #FB6404;
+    --gray: #828486;
+    --dark: #3F3D56;
     --white: #FAFAFA;
-    --gray: #A9A9A9;
+    --green: #24AF01;
+    --red: #FF4004;
   }
 
   @media (max-width: 1080px) {
