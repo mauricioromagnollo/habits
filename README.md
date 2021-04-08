@@ -1,9 +1,3 @@
-<!--
-# Select the string below and replace all occurrences in that document with the name of your project.
-
-fullstack-boilerplate
--->
-
 <div align='justify'>
 
 ![](./assets/banner.png)
@@ -17,37 +11,35 @@ fullstack-boilerplate
 ![BADGE_STARS]
 ![BADGE_FORKS]
 
-> A template repository to facilitate the creation of complete projects, including server, client, mobile and documentation.
+> Projeto desenvolvido utilizando Next.js, Node e TypeScript de um calendário de eventos.
 
 <br>
 
 - 🌎 Production: https://website.com
-- 🌐 Development: https://x0n4d0.github.io/fullstack-boilerplate
+- 🌐 Development: https://x0n4d0.github.io/caleventos
 - 🔗 API: https://api.website.com
-- 📲 Mobile: https://play.google.com/store/apps/details?id=fullstack-boilerplate
+- 📲 Mobile: https://play.google.com/store/apps/details?id=caleventos
 
 <br>
 
 ---
 
-<!-- <kbd>🇧🇷 [Traduzir PT-BR](./README.pt-br.md)</kbd> -->
-
-### **INDEX**
+### **Índice**
 
 
-- 📄 **[About](#-about)**
+- 📄 **[Sobre o Projeto](#-sobre-o-projeto)**
 - 🎦 **[Preview](#-preview)**
 - 🎨 **[UI Design](#-ui-design)**
-- 🗄️ **[Database Model](#%EF%B8%8F-database-model)**
-- 📝 **[Requirements](#-requirements)**
+- 🗄️ **[Modelo dos Dados](#%EF%B8%8F-modelo-dos-dados)**
+- 📝 **[Requisitos](#-requisitos)**
 - 📦 **[Releases](#-releases)**
-- 💻 **[Techs](#-techs)**
-- ⚒️ **[Tools](#%EF%B8%8F-tools)**
-- ⚙️ **[Dependencies](#%EF%B8%8F-dependencies)**
-- 🍷 **[Using The Project](#-using-the-project)**
-- 🌱 **[Contributing](#-contributing)**
-- 💡 **[Author](#-author)**
-- 🧾 **[License](#-license)**
+- 💻 **[Tecnologias](#-tecnologias)**
+- ⚒️ **[Ferramentas](#%EF%B8%8F-ferramentas)**
+- ⚙️ **[Dependências](#%EF%B8%8F-dependências)**
+- 🍷 **[Utilizando o Projeto](#-utilizando-o-projeto)**
+- 🌱 **[Contribuindo](#-contribuindo)**
+- 💡 **[Autor](#-autor)**
+- 🧾 **[Licença](#-licença)**
 
 ---
 
@@ -55,11 +47,11 @@ fullstack-boilerplate
 
 <!------------------------------->
 
-## 📄 **About**
+## 📄 **Sobre o Projeto**
 
 Type here about your project and what problem it solves...
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -69,7 +61,7 @@ Type here about your project and what problem it solves...
 
 ![](./assets/preview.gif)
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -77,17 +69,17 @@ Type here about your project and what problem it solves...
 
 ## 🎨 **UI Design**
 
-<kbd>🖼️ [Figma Prototype](LINK_TO_FIGMA_PROTOTYPE)</kbd>
+<kbd>🖼️ [Protótipo do Figma](https://www.figma.com/proto/CxwbDcGOiSFaBC8dJBc5uw/Caleventos?node-id=7%3A0&scaling=min-zoom&page-id=0%3A1)</kbd>
 
 ![](./assets/fonts_colors.png)
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
 <!------------------------------->
 
-## 🗄️ **Database Model**
+## 🗄️ **Modelo dos Dados**
 
 ### Conceptual Model
 ![](./docs/database/database_conceptual_model.png)
@@ -96,18 +88,18 @@ Type here about your project and what problem it solves...
 ![](./docs/database/database_logical_model.png)
 
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
 
 <!------------------------------->
 
-## 📝 **Requirements**
+## 📝 **Requisitos**
 
 Read the complete requirements documentation for this project **[here](./docs/requirements)**.
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -119,7 +111,7 @@ Read the complete requirements documentation for this project **[here](./docs/re
 
 See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases.
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -128,7 +120,7 @@ See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases
 <!------------------------------->
 
 
-## 💻 **Techs**
+## 💻 **Tecnologias**
 
 ### Shared
 
@@ -152,7 +144,7 @@ See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases
 
 ...
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -161,15 +153,15 @@ See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases
 <!------------------------------->
 
 
-## ⚒️ **Tools**
+## ⚒️ **Ferramentas**
 
-- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Figma](https://www.figma.com/) - UI Design (Prototype)
-- [Photopea](https://www.photopea.com/) - Art images
-- [BR Modelo](http://www.sis4.com/brModelo/) - Database Conceptual Model
-- [DB Diagram](https://dbdiagram.io/) - Database Logical Model
+- [Visual Studio Code](https://code.visualstudio.com/) - Editor
+- [Figma](https://www.figma.com/) - UI Design (Protótipo)
+- [Photopea](https://www.photopea.com/) - Desenvolvimento de Artes
+- [BR Modelo](http://www.sis4.com/brModelo/) - Modelagem Conceitual dos Dados
+- [DB Diagram](https://dbdiagram.io/) - Modelagem Lógica dos Dados
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -178,13 +170,13 @@ See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases
 <!------------------------------->
 
 
-## ⚙️ **Dependencies**
+## ⚙️ **Dependências**
 
 - [NodeJS](https://nodejs.org/en/) - v14+
 - [Git](https://git-scm.com/)
 - [Docker](https://www.docker.com/)
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -192,18 +184,18 @@ See **[CHANGELOG](./docs/guides/CHANGELOG.md)** file for read about the releases
 <!------------------------------->
 
 
-## 🍷 **Using The Project**
+## 🍷 **Utilizando o Projeto**
 
 After installing all the [dependencies](#%EF%B8%8F-dependencies) on your computer, follow these steps:
 
 ```sh
-# Clone this repository:
-$ git clone https://github.com/x0n4d0/fullstack-boilerplate
+# Clone este repositório:
+$ git clone https://github.com/x0n4d0/caleventos
 
-# Open the root directory:
-$ cd fullstack-boilerplate
+# Abra o diretório raíz pelo terminal:
+$ cd caleventos
 
-# Install the project root dependencies:
+# Instale as dependências da raíz do projeto:
 $ npm ci
 ```
 
@@ -212,34 +204,34 @@ $ npm ci
  \* See the server [package.json](./packages/server/package.json) file.
 
 ```sh
-# Open the server directory:
-$ cd fullstack-boilerplate/packages/server
+# Abra o diretório do backend (server):
+$ cd caleventos/packages/server
 
-# Install all dependencies:
+# Instale todas as dependências:
 $ npm ci
 
-# Run server in development mode:
+# Rode em modo de desenvolvimento:
 $ npm run dev
 
-# Run eslint to check sintax:
+# Verifique as sintaxe dos arquivos de acordo com o eslint:
 $ npm run lint
 
-# Run unit tests:
+# Rode os testes unitários:
 $ npm run test:unit
 
-# Run integration tests:
+# Rode os testes de integração:
 $ npm run test:integration
 
-# Run staged tests:
+# Rode os testes de staged:
 $ npm run test:staged
 
-# Run coverage files:
+# Gere os arquivos de coverage:
 $ npm run test:ci
 
-# Generate production files:
+# Gere os arquivos de produção:
 $ npm run build
 
-# Run server in production mode:
+# Rode os arquivos de produção:
 $ npm start
 ```
 
@@ -248,11 +240,9 @@ $ npm start
 
 ...
 
-### Client (Mobile)
 
-...
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -260,18 +250,18 @@ $ npm start
 <!------------------------------->
 
 
-## 🌱 **Contributing**
+## 🌱 **Contribuindo**
 
-See **[CONTRIBUTING](./docs/guides/CONTRIBUTING.md)** guidelines for improve your contribution with this project.
+Leia o arquivo **[CONTRIBUTING](./docs/guides/CONTRIBUTING.md)** antes de enviar a sua contribuinção para este projeto.
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
 
 <!------------------------------->
 
-## 💡 **Author**
+## 💡 **Autor**
 
 <table>
   <tr align=center>
@@ -286,18 +276,18 @@ See **[CONTRIBUTING](./docs/guides/CONTRIBUTING.md)** guidelines for improve you
   </tr>
 </table>
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
 
 <!------------------------------->
 
-## 🧾 **License**
+## 🧾 **Licença**
 
-**FullStack Boilerplate** is available under the [MIT license](https://opensource.org/licenses/MIT) &#169; Maurício Romagnoli. See [LICENSE](./LICENSE) file.
+**Caleventos** está disponível sobre a livença [MIT](https://opensource.org/licenses/MIT) &#169; Maurício Romagnoli. Veja o arquivo [LICENSE](./LICENSE).
 
-<kbd>[⬆️ Index](#index)</kbd>
+<kbd>[⬆️ Índice](#índice)</kbd>
 
 <br>
 
@@ -313,14 +303,14 @@ See **[CONTRIBUTING](./docs/guides/CONTRIBUTING.md)** guidelines for improve you
 
 [BADGE_NPM_VERSION]: https://img.shields.io/badge/npm-v6.14.11-cc3534
 
-[BADGE_LICENSE]: https://img.shields.io/github/license/x0n4d0/fullstack-boilerplate
+[BADGE_LICENSE]: https://img.shields.io/github/license/x0n4d0/caleventos
 
-[BADGE_ISSUES_OPEN]: https://img.shields.io/github/issues/x0n4d0/fullstack-boilerplate
+[BADGE_ISSUES_OPEN]: https://img.shields.io/github/issues/x0n4d0/caleventos
 
-[BADGE_ISSUES_CLOSED]: https://img.shields.io/github/issues-closed/x0n4d0/fullstack-boilerplate?color=red
+[BADGE_ISSUES_CLOSED]: https://img.shields.io/github/issues-closed/x0n4d0/caleventos?color=red
 
-[BADGE_OPEN_PULL_REQUESTS]: https://img.shields.io/github/issues-pr/x0n4d0/fullstack-boilerplate?color=blue
+[BADGE_OPEN_PULL_REQUESTS]: https://img.shields.io/github/issues-pr/x0n4d0/caleventos?color=blue
 
-[BADGE_STARS]: https://img.shields.io/github/stars/x0n4d0/fullstack-boilerplate?color=inactive
+[BADGE_STARS]: https://img.shields.io/github/stars/x0n4d0/caleventos?color=inactive
 
-[BADGE_FORKS]: https://img.shields.io/github/forks/x0n4d0/fullstack-boilerplate?color=inactive
+[BADGE_FORKS]: https://img.shields.io/github/forks/x0n4d0/caleventos?color=inactive
