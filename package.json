@@ -1,0 +1,21 @@
+{
+  "name": "fullstack-boilerplate",
+  "version": "1.0.0",
+  "description": "A template repository to facilitate the creation of complete projects, including server, client, mobile and documentation.",
+  "author": "Maurício Romagnoli - x0n4d0 <mauricioromagnolis@gmail.com>",
+  "repository": "https://github.com/x0n4d0/fullstack-boilerplate",
+  "homepage": "https://github.com/x0n4d0/fullstack-boilerplate#readme",
+  "license": "MIT",
+  "keywords": [
+    "boilerplate",
+    "template",
+    "nodejs",
+    "reactjs",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "husky": "^3.1.0"
+  }
+}
