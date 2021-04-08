@@ -137,11 +137,9 @@ Veja o arquivo **[CHANGELOG](./docs/guides/CHANGELOG.md)** para acompanhar as at
 
 ### Client
 
-...
-
-### Mobile
-
-...
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Styled Components](https://styled-components.com/)
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
