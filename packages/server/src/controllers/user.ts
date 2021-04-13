@@ -9,7 +9,6 @@ export class UserController {
   async create(request: Request, response: Response): Promise<Response> {
     const { name, email, password } = request.body;
 
-    // CreateUserService
     const userRepository = new UserRepository();
 
     const isAlreadyExist = await userRepository.findByEmail(email);
