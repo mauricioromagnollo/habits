@@ -25,6 +25,7 @@
   "rules": {
     "prettier/prettier": "error",
     "no-underscore-dangle": "off",
+    "@typescript-eslint/no-empty-function": "off",
     "camelcase":"off",
     "arrow-parens": "error",
     "no-useless-constructor": "off",
