@@ -13,7 +13,6 @@ interface IUserRepository {
   findByEmail(email: string): Promise<User | undefined>;
   create(data: IUserCreate): Promise<User>;
   save(user: User): Promise<User>;
-  list(): Promise<User[]>;
 }
 
 export class UserRepository implements IUserRepository {
