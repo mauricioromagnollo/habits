@@ -1,23 +1,30 @@
-import { getRepository, Repository } from 'typeorm';
+import { getRepository, Raw, Repository } from 'typeorm';
 
+import { AppError } from '../error/app-error';
 import { Event } from '../models/event';
 
 type IEventCreate = {
   name: string;
   description: string;
-  date: string;
-  hour: string;
+  startAt: Date;
+  endsAt: Date;
   userId: string;
+};
+
+type IEventUpdate = {
+  name?: string;
+  description?: string;
+  startAt?: Date;
+  endsAt?: Date;
 };
 
 interface IEventRepository {
   create(data: IEventCreate, userId: string): Promise<Event>;
   delete(id: string): Promise<void>;
-  listAll(): Promise<Event[] | undefined>;
-  // update(id: string, data: IEventCreate): Promise<Event>;
-  // findAllInMonth(monthNumber: number): Promise<Event[] | undefined>;
-  // findAllEventsThatHaveAlreadyOccurred(): Promise<Event[] | undefined>;
-  // findNextEvents(): Promise<Event[]>;
+  list(): Promise<Event[] | undefined>;
+  findByDate(date: Date): Promise<Event | undefined>;
+  findAllInMonth(monthNumber: number): Promise<Event[] | undefined>;
+  update(id: string, data: IEventCreate): Promise<Event>;
 }
 
 export class EventRepository implements IEventRepository {
@@ -30,15 +37,15 @@ export class EventRepository implements IEventRepository {
   public async create({
     name,
     description,
-    date,
-    hour,
+    startAt,
+    endsAt,
     userId,
   }: IEventCreate): Promise<Event> {
     const newEvent = this.ormRepository.create({
       name,
       description,
-      date,
-      hour,
+      startAt,
+      endsAt,
       userId,
     });
     await this.ormRepository.save(newEvent);
@@ -49,8 +56,54 @@ export class EventRepository implements IEventRepository {
     await this.ormRepository.delete(id);
   }
 
-  public async listAll(): Promise<Event[] | undefined> {
+  public async list(): Promise<Event[] | undefined> {
     const events = await this.ormRepository.find();
     return events;
+  }
+
+  public async findByDate(date: Date): Promise<Event | undefined> {
+    const findEvent = await this.ormRepository.findOne({
+      where: {
+        startAt: date,
+      },
+    });
+
+    return findEvent;
+  }
+
+  public async findAllInMonth(
+    monthNumber: number,
+  ): Promise<Event[] | undefined> {
+    const parsedMonth = String(monthNumber).padStart(2, '0');
+    const currentYear = new Date().getFullYear();
+
+    const events = await this.ormRepository.find({
+      where: {
+        startAt: Raw(
+          dateFieldName =>
+            `to_char(${dateFieldName}, 'MM-YYYY') = '${parsedMonth}-${currentYear}'`,
+        ),
+      },
+    });
+
+    return events;
+  }
+
+  public async update(
+    id: string,
+    { name, description, startAt, endsAt }: IEventUpdate,
+  ): Promise<Event> {
+    const event = await this.ormRepository.findOne(id);
+
+    if (!event) {
+      throw new AppError('Event not founded!');
+    }
+
+    event.name = name || event.name;
+    event.description = description || event.description;
+    event.startAt = startAt || event.startAt;
+    event.endsAt = endsAt || event.endsAt;
+
+    return this.ormRepository.save(event);
   }
 }
