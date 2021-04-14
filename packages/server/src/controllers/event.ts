@@ -1,21 +1,27 @@
 import { Request, Response } from 'express';
 
+import { AppError } from '../error/app-error';
 import { EventRepository } from '../repositories/event';
 
 export class EventController {
   constructor() {}
 
   public async create(request: Request, response: Response): Promise<Response> {
-    const { name, description, date, hour, userId } = request.body;
+    const { name, description, startAt, endsAt, userId } = request.body;
 
-    // Verificar se já existe algum evento com a mesma data;
     const eventRepository = new EventRepository();
+
+    const hasEventInTheSameDate = await eventRepository.findByDate(startAt);
+
+    if (hasEventInTheSameDate) {
+      throw new AppError('This event is already booked');
+    }
 
     const event = await eventRepository.create({
       name,
       description,
-      date,
-      hour,
+      startAt,
+      endsAt,
       userId,
     });
 
@@ -36,7 +42,25 @@ export class EventController {
     response: Response,
   ): Promise<Response<Event[]>> {
     const eventRepository = new EventRepository();
-    const events = await eventRepository.listAll();
+    const events = await eventRepository.list();
     return response.json(events);
+  }
+
+  public async show(
+    request: Request,
+    response: Response,
+  ): Promise<Response<Event[]>> {
+    const { month } = request.params;
+    const eventRepository = new EventRepository();
+    const events = await eventRepository.findAllInMonth(Number(month));
+    return response.json(events);
+  }
+
+  public async update(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params;
+    const { name, description, startAt, endsAt } = request.body;
+    const eventRepository = new EventRepository();
+    eventRepository.update(id, { name, description, startAt, endsAt });
+    return response.json({ message: 'Evento atualizado' });
   }
 }
