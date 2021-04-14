@@ -24,11 +24,11 @@ export class CreateEvents1618347973877 implements MigrationInterface {
           },
           {
             name: 'startAt',
-            type: 'datetime',
+            type: 'timestamp with time zone',
           },
           {
             name: 'endsAt',
-            type: 'datetime',
+            type: 'timestamp with time zone',
           },
           {
             name: 'userId',
