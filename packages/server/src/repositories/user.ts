@@ -12,6 +12,8 @@ interface IUserRepository {
   findById(id: string): Promise<User | undefined>;
   findByEmail(email: string): Promise<User | undefined>;
   create(data: IUserCreate): Promise<User>;
+  save(user: User): Promise<User>;
+  list(): Promise<User[]>;
 }
 
 export class UserRepository implements IUserRepository {
@@ -37,5 +39,9 @@ export class UserRepository implements IUserRepository {
     const newUser = this.ormRepository.create(data);
     await this.ormRepository.save(newUser);
     return newUser;
+  }
+
+  public async save(user: User): Promise<User> {
+    return this.ormRepository.save(user);
   }
 }

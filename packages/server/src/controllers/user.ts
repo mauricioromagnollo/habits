@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { User } from '../models/user';
 
 import { AppError } from '../error/app-error';
 import { HashProvider } from '../providers/hash';
@@ -41,6 +42,27 @@ export class UserController {
     }
 
     Reflect.deleteProperty(user, 'password');
+
+    return response.json(user);
+  }
+
+  async update(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params;
+    const { name, email, password } = request.body;
+
+    const userRepository = new UserRepository();
+
+    const user = await userRepository.findById(id);
+
+    if (!user) {
+      throw new AppError('User not founded!');
+    }
+
+    user.name = name || user.name;
+    user.email = email || user.email;
+    user.password = password || user.password;
+
+    userRepository.save(user);
 
     return response.json(user);
   }

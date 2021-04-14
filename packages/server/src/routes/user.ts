@@ -8,5 +8,6 @@ const userController = new UserController();
 
 userRoutes.post('/', userController.create);
 userRoutes.get('/:id', userController.show);
+userRoutes.patch('/:id', userController.update);
 
 export { userRoutes };
