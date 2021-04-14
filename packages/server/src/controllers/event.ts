@@ -50,7 +50,8 @@ export class EventController {
     request: Request,
     response: Response,
   ): Promise<Response<Event[]>> {
-    const { month } = request.params;
+    const { month } = request.query;
+    console.log(month);
     const eventRepository = new EventRepository();
     const events = await eventRepository.findAllInMonth(Number(month));
     return response.json(events);
