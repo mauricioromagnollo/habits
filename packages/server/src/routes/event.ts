@@ -9,5 +9,7 @@ const eventController = new EventController();
 eventRoutes.post('/', eventController.create);
 eventRoutes.delete('/:id', eventController.delete);
 eventRoutes.get('/', eventController.index);
+eventRoutes.get('/:month', eventController.show);
+eventRoutes.patch('/:id', eventController.update);
 
 export { eventRoutes };
