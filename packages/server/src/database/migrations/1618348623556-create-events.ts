@@ -23,12 +23,12 @@ export class CreateEvents1618347973877 implements MigrationInterface {
             isNullable: true,
           },
           {
-            name: 'date',
-            type: 'varchar',
+            name: 'startAt',
+            type: 'datetime',
           },
           {
-            name: 'hour',
-            type: 'varchar',
+            name: 'endsAt',
+            type: 'datetime',
           },
           {
             name: 'userId',
