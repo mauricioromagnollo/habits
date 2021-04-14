@@ -19,11 +19,11 @@ export class Event {
   @Column()
   description: string;
 
-  @Column()
-  date: string;
+  @Column('timestamp with time zone')
+  startAt: Date;
 
-  @Column()
-  hour: string;
+  @Column('timestamp with time zone')
+  endsAt: Date;
 
   @Column()
   userId: string;
