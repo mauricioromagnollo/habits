@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import { User } from '../models/user';
 
 import { AppError } from '../error/app-error';
 import { HashProvider } from '../providers/hash';
