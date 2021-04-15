@@ -15,10 +15,4 @@ export const Container = styled.header`
     width: 15rem;
     height: auto;
   }
-
-  > div {
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-  }
 `;

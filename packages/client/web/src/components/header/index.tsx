@@ -1,15 +1,16 @@
-import { LinkButton } from '../link-button';
+import { ReactNode } from 'react';
 
 import { Container } from './styles';
 
-export const Header = (): JSX.Element => {
+interface HeaderProps {
+  children?: ReactNode;
+}
+
+export const Header = ({ children }: HeaderProps): JSX.Element => {
   return (
     <Container>
       <img src="logo.png" alt="Caleventos" />
-      <div>
-        <LinkButton title="Entrar" page="login" />
-        <LinkButton title="Registrar" page="register" />
-      </div>
+      {children}
     </Container>
   );
 };
