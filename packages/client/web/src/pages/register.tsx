@@ -1,11 +1,13 @@
 import { FormEvent, useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
+import { FiArrowLeft } from 'react-icons/fi';
+import Link from 'next/link';
 
 import api from '../services/api';
 
 import { Header } from '../components/header';
 
-import { Main, Form, Input } from '../styles/pages/register';
+import { Main, Form, Input, BackHome } from '../styles/pages/register';
 
 export default function Register(): JSX.Element {
   const [formData, setFormData] = useState({
@@ -40,6 +42,14 @@ export default function Register(): JSX.Element {
   return (
     <>
       <Header />
+      <BackHome>
+        <Link href="/">
+          <a>
+            <FiArrowLeft />
+            Voltar para Home
+          </a>
+        </Link>
+      </BackHome>
       <Main>
         <Form onSubmit={handleSubmit}>
           <h1>Faça seu cadastro</h1>

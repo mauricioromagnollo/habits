@@ -42,3 +42,14 @@ export const Input = styled.input`
     border: 2px solid var(--blue);
   }
 `;
+
+export const BackHome = styled.div`
+  position: relative;
+  margin: 2rem 0 0 2rem;
+  width: 100%;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+`;
