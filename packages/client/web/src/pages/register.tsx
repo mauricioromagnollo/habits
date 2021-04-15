@@ -27,7 +27,7 @@ export default function Register(): JSX.Element {
 
     alert('Usuário criado!');
 
-    api.post('/users', data);
+    await api.post('/users', data);
 
     router.push('/');
   }
