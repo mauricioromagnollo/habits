@@ -1,11 +1,22 @@
 import { BiCheck } from 'react-icons/bi';
 import { Header } from '../components/header';
-import { Container, Main, Section } from '../styles/pages/home';
+import {
+  Container,
+  Main,
+  Section,
+  RegisterButtons,
+} from '../styles/pages/home';
+import { LinkButton } from '../components/link-button';
 
 export default function Home(): JSX.Element {
   return (
     <Container>
-      <Header />
+      <Header>
+        <RegisterButtons>
+          <LinkButton title="Entrar" page="login" />
+          <LinkButton title="Registrar" page="register" />
+        </RegisterButtons>
+      </Header>
       <Main>
         <Section>
           <h1>Calendário de Eventos</h1>
