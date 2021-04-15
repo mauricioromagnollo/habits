@@ -18,6 +18,12 @@ export const Main = styled.main`
   }
 `;
 
+export const RegisterButtons = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+`;
+
 export const Section = styled.section`
   margin: 0 0 0 50px;
 
