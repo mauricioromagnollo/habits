@@ -15,9 +15,9 @@
 
 <br>
 
-- 🌎 Production: https://website.com
-- 🌐 Development: https://x0n4d0.github.io/caleventos
-- 🔗 API: https://api.website.com
+<!-- - 🌎 Production: https://website.com -->
+<!-- - 🌐 Development: https://x0n4d0.github.io/caleventos -->
+<!-- - 🔗 API: https://api.website.com -->
 
 <br>
 
@@ -27,10 +27,10 @@
 
 
 - 📄 **[Sobre o Projeto](#-sobre-o-projeto)**
-- 🎦 **[Preview](#-preview)**
+<!-- - 🎦 **[Preview](#-preview)** -->
 - 🎨 **[UI Design](#-ui-design)**
 - 🗄️ **[Modelo dos Dados](#%EF%B8%8F-modelo-dos-dados)**
-- 📝 **[Requisitos](#-requisitos)**
+<!-- - 📝 **[Requisitos](#-requisitos)** -->
 - 📦 **[Releases](#-releases)**
 - 💻 **[Tecnologias](#-tecnologias)**
 - ⚒️ **[Ferramentas](#%EF%B8%8F-ferramentas)**
@@ -56,13 +56,13 @@ O projeto consiste em criar um calendário de eventos, onde será possível gere
 
 <!------------------------------->
 
-## 🎦 **Preview**
+<!-- ## 🎦 **Preview**
 
 ![](./assets/preview.gif)
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
-<br>
+<br> -->
 
 <!------------------------------->
 
@@ -94,13 +94,13 @@ O projeto consiste em criar um calendário de eventos, onde será possível gere
 
 <!------------------------------->
 
-## 📝 **Requisitos**
+<!-- ## 📝 **Requisitos**
 
 Leia os [arquivos de requisitos](./docs/requirements) do projeto.
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
-<br>
+<br> -->
 
 
 <!------------------------------->
@@ -134,12 +134,24 @@ Veja o arquivo **[CHANGELOG](./docs/guides/CHANGELOG.md)** para acompanhar as at
 
 - [NodeJS](https://nodejs.org/en/)
 - [TS Node Dev](https://www.npmjs.com/package/ts-node-dev)
+- [BCrypt.JS](https://github.com/kelektiv/node.bcrypt.js/)
+- [Cors](https://www.npmjs.com/package/cors)
+- [Dotenv](https://github.com/motdotla/dotenv)
+- [Express](https://expressjs.com/)
+- [TypeORM](https://typeorm.io/#/)
+- [UUIDv4](https://www.npmjs.com/package/uuidv4)
 
 ### Client
 
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
 - [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+### Database
+
+- [PostgreSQL](https://www.postgresql.org/)
 
 <kbd>[⬆️ Índice](#índice)</kbd>
 
@@ -155,6 +167,8 @@ Veja o arquivo **[CHANGELOG](./docs/guides/CHANGELOG.md)** para acompanhar as at
 - [Visual Studio Code](https://code.visualstudio.com/) - Editor
 - [Figma](https://www.figma.com/) - UI Design (Protótipo)
 - [Undraw](https://undraw.co/) - Download de Imagem
+- [Postbird](https://github.com/Paxa/postbird) - PostgreSQL Client
+- [Insomnia](https://insomnia.rest/) - Testar requisições da API
 - [Photopea](https://www.photopea.com/) - Desenvolvimento de Artes
 - [BR Modelo](http://www.sis4.com/brModelo/) - Modelagem Conceitual dos Dados
 - [DB Diagram](https://dbdiagram.io/) - Modelagem Lógica dos Dados
@@ -171,6 +185,7 @@ Veja o arquivo **[CHANGELOG](./docs/guides/CHANGELOG.md)** para acompanhar as at
 ## ⚙️ **Dependências**
 
 - [NodeJS](https://nodejs.org/en/) - v14+
+- [Yarn](https://yarnpkg.com/)
 - [Git](https://git-scm.com/)
 - [Docker](https://www.docker.com/)
 
@@ -231,13 +246,33 @@ $ npm run build
 
 # Rode os arquivos de produção:
 $ npm start
+
+# Rode as migrations:
+$ yarn typeorm migration:run
+
+# Criando uma instância do docker
+$ docker run --name caleventos -e POSTGRES_PASSWORD=docker -p 5434:5432 -d postgres
 ```
 
 
 ### Client (Web)
 
-...
+```sh
+# Abra o diretório do front-end (client/web):
+$ cd caleventos/packages/client/web
 
+# Instale todas as dependências:
+$ npm ci
+
+# Rode em modo de desenvolvimento:
+$ npm run dev
+
+# Gere os arquivos de produção:
+$ npm run build && npm run export
+
+# Rode os arquivos de produção:
+$ npm start
+```
 
 
 <kbd>[⬆️ Índice](#índice)</kbd>
