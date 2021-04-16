@@ -20,12 +20,8 @@ export default function Login(): JSX.Element {
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     const { email, password } = formData;
-    const data = new FormData();
 
-    data.append('email', email);
-    data.append('password', password);
-
-    const id = await api.post('/session', data);
+    const id = await api.post('/sessions', { email, password });
 
     if (id) {
       router.push('/dashboard');

@@ -21,15 +21,16 @@ export default function Register(): JSX.Element {
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     const { name, email, password } = formData;
-    const data = new FormData();
 
-    data.append('name', name);
-    data.append('email', email);
-    data.append('password', password);
+    // const data = new FormData();
+
+    // data.append('name', name);
+    // data.append('email', email);
+    // data.append('password', password);
 
     alert('Usuário criado!');
 
-    await api.post('/users', data);
+    const newUser = await api.post('/users', { name, email, password });
 
     router.push('/');
   }

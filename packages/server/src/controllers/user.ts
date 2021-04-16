@@ -26,7 +26,7 @@ export class UserController {
       password: hashedPassword,
     });
 
-    return response.json(user);
+    return response.status(200).json(user);
   }
 
   async show(request: Request, response: Response): Promise<Response> {
