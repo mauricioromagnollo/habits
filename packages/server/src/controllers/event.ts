@@ -3,6 +3,8 @@ import { Request, Response } from 'express';
 import { AppError } from '../error/app-error';
 import { EventRepository } from '../repositories/event';
 
+import EventView from '../views/event';
+
 export class EventController {
   constructor() {}
 
@@ -40,10 +42,14 @@ export class EventController {
   public async index(
     _request: Request,
     response: Response,
-  ): Promise<Response<Event[]>> {
+  ): Promise<Response<Event[] | undefined>> {
     const eventRepository = new EventRepository();
     const events = await eventRepository.list();
-    return response.json(events);
+    if (events) {
+      return response.json(EventView.renderMany(events));
+    }
+
+    throw new AppError('No Events!');
   }
 
   public async show(

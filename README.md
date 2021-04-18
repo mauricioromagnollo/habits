@@ -26,11 +26,10 @@
 ### **Índice**
 
 
-- 📄 **[Sobre o Projeto](#-sobre-o-projeto)**
 <!-- - 🎦 **[Preview](#-preview)** -->
+- 📄 **[Sobre o Projeto](#-sobre-o-projeto)**
 - 🎨 **[UI Design](#-ui-design)**
 - 🗄️ **[Modelo dos Dados](#%EF%B8%8F-modelo-dos-dados)**
-<!-- - 📝 **[Requisitos](#-requisitos)** -->
 - 📦 **[Releases](#-releases)**
 - 💻 **[Tecnologias](#-tecnologias)**
 - ⚒️ **[Ferramentas](#%EF%B8%8F-ferramentas)**
@@ -148,6 +147,7 @@ Veja o arquivo **[CHANGELOG](./docs/guides/CHANGELOG.md)** para acompanhar as at
 - [Styled Components](https://styled-components.com/)
 - [Axios](https://github.com/axios/axios)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- [React Input Mask](https://github.com/sanniassin/react-input-mask)
 
 ### Database
 

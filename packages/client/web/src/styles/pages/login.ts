@@ -4,7 +4,15 @@ export const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-top: 3rem;
+
+  > p {
+    margin-top: 20px;
+    strong {
+      color: var(--blue);
+    }
+  }
 `;
 
 export const Form = styled.form`

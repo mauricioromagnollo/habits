@@ -6,8 +6,8 @@ import { Event } from '../models/event';
 type IEventCreate = {
   name: string;
   description: string;
-  startAt: Date;
-  endsAt: Date;
+  startAt: string;
+  endsAt: string;
   userId: string;
 };
 
@@ -57,7 +57,9 @@ export class EventRepository implements IEventRepository {
   }
 
   public async list(): Promise<Event[] | undefined> {
-    const events = await this.ormRepository.find();
+    const events = await this.ormRepository.find({
+      order: { startAt: 'ASC' },
+    });
     return events;
   }
 

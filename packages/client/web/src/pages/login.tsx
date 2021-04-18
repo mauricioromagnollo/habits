@@ -1,13 +1,12 @@
-import { FormEvent, useState, ChangeEvent } from 'react';
+import { FormEvent, useState, ChangeEvent, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { FiArrowLeft } from 'react-icons/fi';
 import Link from 'next/link';
 
-import api from '../services/api';
-
 import { Header } from '../components/header';
 
 import { Main, Form, Input, BackHome } from '../styles/pages/login';
+import { AuthContext } from '../contexts/auth';
 
 export default function Login(): JSX.Element {
   const [formData, setFormData] = useState({
@@ -15,17 +14,18 @@ export default function Login(): JSX.Element {
     password: '',
   });
 
+  const { signIn } = useContext(AuthContext);
+
   const router = useRouter();
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     const { email, password } = formData;
 
-    const id = await api.post('/sessions', { email, password });
-
-    if (id) {
+    try {
+      await signIn({ email, password });
       router.push('/dashboard');
-    } else {
+    } catch (err) {
       alert('Usuário não cadastrado!');
     }
   }
@@ -64,6 +64,14 @@ export default function Login(): JSX.Element {
           />
           <button type="submit">Entrar</button>
         </Form>
+
+        <p>
+          Ainda não tem uma conta?
+          <strong>
+            <Link href="/register">Clique aqui</Link>
+          </strong>{' '}
+          para criar!
+        </p>
       </Main>
     </>
   );

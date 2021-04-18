@@ -27,6 +27,8 @@ export class SessionController {
       throw new AppError('Incorrect email/password combination.', 401);
     }
 
+    Reflect.deleteProperty(user, 'password');
+
     return response.json(user);
   }
 }
