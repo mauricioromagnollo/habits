@@ -7,7 +7,9 @@
   "author": "Maurício Romagnoli <x0n4d0>",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "migrate:dev": "npx prisma migrate dev",
+    "prisma:studio": "npx prisma studio"
   },
   "dependencies": {
     "@fastify/cors": "^8.2.0",
