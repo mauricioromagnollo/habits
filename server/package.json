@@ -6,8 +6,12 @@
   "keywords": [],
   "author": "Maurício Romagnoli <x0n4d0>",
   "license": "MIT",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "prisma:seed": "npx prisma db seed",
     "prisma:migrate:dev": "npx prisma migrate dev",
     "prisma:studio": "npx prisma studio",
     "prisma:generate:erd": "npx prisma generate"
