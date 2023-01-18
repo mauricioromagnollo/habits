@@ -24,3 +24,11 @@ model HabitWeekDay {
   @@unique([habit_id, week_day])
   @@map("HABIT_WEEK_DAYS")
 }
+
+model Day {
+  id String @id @default(uuid())
+  date DateTime
+
+  @@unique([date])
+  @@map("DAYS")
+}
