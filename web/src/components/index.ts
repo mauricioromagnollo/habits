@@ -1,7 +1,5 @@
-import { Header } from './Header';
-import { SummaryTable } from './SummaryTable';
-
-export {
-  Header,
-  SummaryTable
-}
+export * from './HabitDay';
+export * from './Header';
+export * from './NewHabitForm';
+export * from './ProgressBar';
+export * from './SummaryTable';
