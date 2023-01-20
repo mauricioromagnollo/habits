@@ -1,8 +1,6 @@
-import { Header } from "./Header";
-import { Loading } from "./Loading";
+export * from "./Header";
+export * from "./Loading";
 export * from "./HabitDay";
-
-export {
-  Header,
-  Loading,
-}
+export * from "./BackButton";
+export * from "./Checkbox";
+export * from "./ProgressBar";
