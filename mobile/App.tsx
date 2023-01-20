@@ -9,7 +9,7 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { Loading } from './src/components';
-import { Home } from './src/screens';
+import { Routes } from './src/routes';
 
 export default function App() {
   const [ isFontsLoaded ] = useFonts({
@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <>
-      <Home />
+      <Routes />
       <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
     </>
   );
