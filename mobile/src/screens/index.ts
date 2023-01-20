@@ -1,5 +1,4 @@
-import { Home } from './Home';
+export * from './Home';
+export * from './New';
+export * from './Habit';
 
-export {
-  Home
-}
