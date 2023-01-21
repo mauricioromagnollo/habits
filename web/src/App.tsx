@@ -1,4 +1,6 @@
-import './libs/dayjs'
+import { DateTimeUtil } from './utils';
+DateTimeUtil.setLocale()
+
 import './styles/global.css';
 import { Header, SummaryTable } from './components';
 

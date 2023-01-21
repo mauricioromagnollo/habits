@@ -1,7 +1,6 @@
-import dayjs from "dayjs"
 import { useEffect, useState } from "react"
 import { api } from "../libs/axios"
-import { generateDatesFromYearBeginning } from "../utils"
+import { DateTimeUtil } from "../utils"
 import { HabitDay } from "./HabitDay"
 
 const weekDays = [
@@ -14,7 +13,7 @@ const weekDays = [
   'S',
 ]
 
-const summaryDates = generateDatesFromYearBeginning()
+const summaryDates = DateTimeUtil.getAllDatesSinceBeginOfYear()
 
 const minimumSummaryDatesSize = 18 * 7 // 18 weeks
 const amountOfDaysToFill = minimumSummaryDatesSize - summaryDates.length
@@ -46,22 +45,22 @@ export function SummaryTable() {
       </div>
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        {summaryDates.map(date => {
+        {summary.length > 0 && summaryDates.map(date => {
           const dayInSummary = summary.find(day => {
-            return dayjs(date).isSame(day.date, 'day')
+            return DateTimeUtil.isDatesTheSameDay(date, day.date)
           })
 
           return (
             <HabitDay
               key={date.toString()}
               date={date}
-              completed={dayInSummary?.completed}
+              defaultCompleted={dayInSummary?.completed}
               amount={dayInSummary?.amount}
             />
           )
         })}
 
-        {amountOfDaysToFill > 0 && Array.from({ length: amountOfDaysToFill }).map((_, i) => <HabitDay key={i} disabled />)}
+        {amountOfDaysToFill > 0 && Array.from({ length: amountOfDaysToFill }).map((_, i) => <HabitDay key={i} date={new Date()} disabled />)}
       </div>
     </div>
   )
