@@ -114,7 +114,7 @@ export async function routes(app: FastifyInstance) {
 
     const completedHabits = day?.habits.map(dayHabit => {
       return dayHabit.habit_id
-    })
+    }) ?? []
 
     return {
       possibleHabits,
